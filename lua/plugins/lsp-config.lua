@@ -11,8 +11,9 @@ return {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,
     opts = {
-      auto_install = true,
-    },
+      ensure_installed =
+        {"lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls"},
+    }
   },
   {
     "neovim/nvim-lspconfig",
