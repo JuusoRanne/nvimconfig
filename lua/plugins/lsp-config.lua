@@ -12,7 +12,7 @@ return {
     lazy = false,
     opts = {
       ensure_installed =
-        {"lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls"},
+        {"lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls", "gopls"},
     }
   },
   {
@@ -46,6 +46,10 @@ return {
       lspconfig.azure_pipelines_ls.setup({
         capabilities = capabilities
       })
+      lspconfig.gopls.setup({
+        capabilities = capabilities
+      })
+
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
