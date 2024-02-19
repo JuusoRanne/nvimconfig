@@ -12,7 +12,7 @@ return {
     lazy = false,
     opts = {
       ensure_installed =
-        {"lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls", "gopls"},
+      { "lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls", "gopls" },
     }
   },
   {
@@ -22,6 +22,8 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       local lspconfig = require("lspconfig")
+      local util = require "lspconfig/util"
+
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
@@ -47,8 +49,17 @@ return {
         capabilities = capabilities
       })
       lspconfig.gopls.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        cmd = { "gopls" },
+        filetypes = { "go", "gomod", "gowork", "gotmpl" },
+        root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+        settings = {
+          gopls = {
+            completedUnimported = true,
+          },
+        },
       })
+
 
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
