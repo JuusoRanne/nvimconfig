@@ -7,4 +7,9 @@ vim.cmd("set number")
 vim.cmd("set clipboard=unnamedplus")
 vim.g.mapleader = " "
 
-
+-- Set additional filetypes
+vim.filetype.add({
+  extension = {
+    tfvars = "text"  -- tfvars is not supported by terraformls, this is workaround
+  }
+})
