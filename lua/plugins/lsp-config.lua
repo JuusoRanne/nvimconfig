@@ -12,11 +12,7 @@ return {
     lazy = false,
     opts = {
       ensure_installed =
-<<<<<<< Updated upstream
-      { "lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls", "gopls" },
-=======
-      { "lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls", "jsonls" },
->>>>>>> Stashed changes
+      { "lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls", "jsonls", "gopls" },
     }
   },
 
@@ -53,7 +49,6 @@ return {
       lspconfig.azure_pipelines_ls.setup({
         capabilities = capabilities
       })
-<<<<<<< Updated upstream
       lspconfig.gopls.setup({
         capabilities = capabilities,
         cmd = { "gopls" },
@@ -65,13 +60,9 @@ return {
           },
         },
       })
-
-
-=======
       lspconfig.jsonls.setup({
         capabilities = capabilities
       })
->>>>>>> Stashed changes
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
