@@ -1,4 +1,4 @@
 return {
-  "fatih/vim-go",
-  "darrikonn/vim-gofmt"
+  "darrikonn/vim-gofmt",
+  "olexsmir/gopher.nvim"
 }
