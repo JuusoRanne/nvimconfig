@@ -20,3 +20,5 @@ require("lazy").setup("plugins")
 
 -- vim.cmd(":Copilot disable")
 vim.cmd(":colorscheme catppuccin")
+
+

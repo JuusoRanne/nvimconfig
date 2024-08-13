@@ -12,7 +12,7 @@ return {
     lazy = false,
     opts = {
       ensure_installed =
-      { "lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls", "jsonls", "gopls", "tsserver", "html", "cssls"},
+      { "lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls", "jsonls", "gopls", "tsserver", "html", "cssls", "texlab"},
     }
   },
 
@@ -56,6 +56,10 @@ return {
       lspconfig.azure_pipelines_ls.setup({
         capabilities = capabilities
       })
+      lspconfig.texlab.setup({
+        capabilities = capabilities
+      })
+
       lspconfig.gopls.setup({
         capabilities = capabilities,
         cmd = { "gopls" },
