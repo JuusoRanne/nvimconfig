@@ -30,5 +30,6 @@
   "vim-gofmt": { "branch": "master", "commit": "cea5b06b2c2646ced49a64f006be2edb42645dd1" },
   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
   "vim-wakatime": { "branch": "master", "commit": "53bba6bb8342de9cbdafc82142a9b5e82008d858" },
-  "vimtex": { "branch": "master", "commit": "7f6817c0dca7793907785dd5edb01761df13572c" }
+  "vimtex": { "branch": "master", "commit": "7f6817c0dca7793907785dd5edb01761df13572c" },
+  "which-key.nvim": { "branch": "main", "commit": "bfec3d6bc0a9b0b2cb11644642f78c2c3915eef0" }
 }
