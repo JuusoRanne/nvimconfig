@@ -16,7 +16,7 @@ return {
     }
   },
   {
-   "rafamadriz/friendly-snippets"
+    "rafamadriz/friendly-snippets"
   },
 
   {
@@ -43,11 +43,13 @@ return {
           ['<C-e>'] = cmp.mapping.abort(),
           ['<Tab>'] = cmp.mapping.confirm({ select = true }),
           ['<Enter>'] = cmp.mapping.confirm({ select = true }),
-
+          ['<C-j>'] = cmp.mapping.select_next_item(),
+          -- Ctrl + k to select previous item
+          ['<C-k>'] = cmp.mapping.select_prev_item(),
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
-          { name = 'luasnip' }, -- For luasnip users.
+          { name = 'luasnip' },       -- For luasnip users.
         }, {
           { name = 'buffer' },
         })

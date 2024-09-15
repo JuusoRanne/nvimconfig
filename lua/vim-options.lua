@@ -11,6 +11,8 @@ vim.api.nvim_set_keymap('i', '<C-l>', '<Esc>la', { noremap = true, silent = true
 
 -- Copilot mapping
 vim.api.nvim_set_keymap('i', '<Leader><Tab>', 'copilot#Accept("<CR>")', {expr = true, silent = true})
+vim.api.nvim_set_var('copilot_no_tab_map', true)
+
 
 -- Set additional filetypes
 vim.filetype.add({
