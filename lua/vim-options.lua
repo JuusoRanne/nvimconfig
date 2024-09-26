@@ -3,7 +3,7 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
-vim.cmd("set number")
+vim.cmd("set relativenumber")
 vim.cmd("set clipboard=unnamedplus")
 vim.g.mapleader = "å"
 vim.api.nvim_set_keymap('i', '<C-l>', '<Esc>la', { noremap = true, silent = true })
