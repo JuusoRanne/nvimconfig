@@ -17,9 +17,15 @@ vim.opt.rtp:prepend(lazypath)
 -- get lazy configs and plugs (points to plugins.lua)
 require("vim-options")
 require("lazy").setup("plugins")
+require("everforest").load()
 
 
--- vim.cmd(":Copilot disable")
-vim.cmd(":colorscheme catppuccin")
+vim.cmd(":Copilot disable")
 
-
+-- Make Nvim transparent
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight Nontext ctermbg=none
+]]

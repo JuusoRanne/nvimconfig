@@ -2,17 +2,19 @@
 return {
   {
     "williamboman/mason.nvim",
-    lazy = false,
-    config = function()
-      require("mason").setup()
-    end,
+    opts = {
+      ensure_installed = {
+        "tailwindcss-language-server",
+        "typescript-language-server",
+      }
+    }
   },
   {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,
     opts = {
       ensure_installed =
-      { "lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls", "jsonls", "gopls", "tsserver", "html", "cssls", "texlab"},
+      { "lua_ls", "bashls", "marksman", "pyright", "terraformls", "tflint", "azure_pipelines_ls", "jsonls", "gopls", "ts_ls", "html", "cssls", "texlab"},
     }
   },
 
@@ -28,7 +30,7 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
-      lspconfig.tsserver.setup({
+      lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
       lspconfig.bashls.setup({
